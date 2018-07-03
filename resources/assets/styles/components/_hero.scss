@@ -1,0 +1,16 @@
+.hero.is-dgreen-gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4e574e+1,587d45+99 */
+  background: #4e574e; /* Old browsers */
+  background: -moz-linear-gradient(top, #4e574e 1%, #587d45 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #4e574e 1%, #587d45 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #4e574e 1%, #587d45 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#4e574e', endColorstr='#587d45', GradientType=0); /* IE6-9 */
+}
+
+.hero.is-dgreen-gradient .hero-body span.title h1 {
+  color: $light;
+  font-size: 3.7vw;
+  margin: 0;
+  font-weight: 100;
+  letter-spacing: 1px;
+}

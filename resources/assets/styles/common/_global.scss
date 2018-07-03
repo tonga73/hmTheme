@@ -1,0 +1,14 @@
+header .current-menu-item {
+  background-color: $dgreen;
+
+  a {
+    i {
+      margin-right: 0 !important;
+      color: $white;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}

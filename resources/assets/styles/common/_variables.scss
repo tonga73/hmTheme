@@ -1,0 +1,54 @@
+// Import Fonts
+@import url('https://fonts.googleapis.com/css?family=Barlow:100,300,400,700|Bellefair|Cinzel:400,700');
+
+// Custom Colors
+$primary:       #b0532c;
+$secondary:     #7d5545;
+$success:       #2cb09d;
+$info:          #056356;
+$warning:       #4a3030;
+$danger:        #fc8958;
+
+$green:			#587d45;
+$dgreen:		#4e574e;
+
+$white:			#fff;
+$light:         #ebeced;
+$dark:          #3b444b;
+$black:			#000;
+
+// Sizes
+$size-1: 3vw !important;
+$size-2: 2.5vw !important;
+$size-3: 2vw !important;
+$size-4: 1.5vw !important;
+$size-5: 1.25vw !important;
+$size-6: 1vw !important;
+$size-7: 0.75vw !important;
+
+// Body · General Variables
+$body-bg:                   $light !default;
+$body-color:                $dark !default;
+
+// Navigation
+$navigation-bg: $warning;
+$navigation-color: darken($light, 20%);
+$navigation-hover-bg: $dgreen;
+$navigation-hover-color: $light !important;
+
+// Footer
+$footer-background-color: $dark;
+$footer-link-color: $white;
+
+/** Box Model  */
+$spacer:                2rem;
+
+$text: $dark;
+$background: $light;
+$link: $primary;
+
+// Font Family (Global-Custom)
+$family-sans-serif: 'Barlow', sans-serif;
+$font-family-sans-serif:      'Barlow', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$family-logo: 'Cinzel', serif;

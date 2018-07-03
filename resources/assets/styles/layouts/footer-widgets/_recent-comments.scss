@@ -1,0 +1,36 @@
+footer .widget.widget_recent_comments {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: $light;
+  max-height: 100%;
+
+  h3 {
+    width: 100%;
+    background-color: $warning !important;
+  }
+
+  ul {
+    li {
+      a {
+        background-color: $light;
+        color: $dark;
+
+        &:hover {
+          background-color: $green;
+          color: $light;
+        }
+      }
+
+      span.comment-author-link {
+        color: $white;
+
+        a {
+          background-color: transparent;
+          color: $primary;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
