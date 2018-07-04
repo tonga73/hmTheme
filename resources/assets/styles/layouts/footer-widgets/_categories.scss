@@ -1,0 +1,43 @@
+footer .widget.widget_categories {
+  align-self: center;
+
+  h3 {
+    display: none;
+  }
+
+  form {
+    min-height: 60px;
+
+    select {
+      min-height: 45px;
+      min-width: 100%;
+      font-size: 1em !important;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  footer .widget.widget_categories {
+    align-self: center;
+
+    form {
+      min-height: 60px;
+
+      input {
+        min-height: 37px;
+        min-width: 93px;
+        font-size: 1em !important;
+      }
+
+      label input {
+        min-height: 37px;
+        min-width: 217px;
+      }
+
+      label input::-webkit-input-placeholder {
+        font-size: 20px;
+        line-height: 175%;
+      }
+    }
+  }
+}

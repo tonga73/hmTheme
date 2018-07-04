@@ -1,0 +1,54 @@
+footer .widget.widget_search {
+  align-self: center;
+
+  form {
+    min-height: 60px;
+
+    input {
+      min-height: 45px;
+      min-width: 35%;
+      font-size: 1em !important;
+    }
+
+    label input {
+      min-height: 45px;
+      min-width: 65%;
+    }
+
+    label input::-webkit-input-placeholder {
+      font-size: 20px;
+      line-height: 175%;
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  footer .widget.widget_search {
+    align-self: center;
+
+    form {
+      min-height: 60px;
+
+      input {
+        min-height: 37px;
+        min-width: 93px;
+        font-size: 1em !important;
+      }
+
+      label input {
+        min-height: 37px;
+        min-width: 217px;
+        padding: 0;
+        margin: 0;
+      }
+
+      label input::-webkit-input-placeholder {
+        font-size: 20px;
+        line-height: 175%;
+        padding: 0;
+        margin: 0;
+        top: 0;
+      }
+    }
+  }
+}

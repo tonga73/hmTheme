@@ -14,3 +14,13 @@
   font-weight: 100;
   letter-spacing: 1px;
 }
+
+@media only screen and (max-width: $tablet) {
+  .hero.is-dgreen-gradient .hero-body span.title h1 {
+    color: $light;
+    font-size: 3em;
+    margin: 0;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+}

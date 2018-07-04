@@ -2,7 +2,7 @@
   Template Name: Inicio
 --}}
 
-@extends('layouts.app')
+@extends('layouts.app-fluid')
 
 @section('content')
   <div class="columns is-multiline">

@@ -1,65 +1,148 @@
-header.banner .navbar.navigation,
-.navigation {
-  background-color: $navigation-bg;
+$logo-size-fullhd: 7vw;
+$logo-size-tablet: 2.9em;
+
+.logo {
+  font-family: $family-logo;
+  font-size: $logo-size-fullhd;
+}
+
+// Header Logo Section
+header.banner .brand {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  min-height: 30px;
-  max-height: 27px;
-  height: 100%;
-}
+  justify-content: center;
+  padding: 3vw;
 
-.nav-item {
-  padding: 0;
-  margin: 0;
-}
-
-header .featured {
-  background-color: $secondary !important;
-}
-
-.nav-link {
-  color: $navigation-color !important;
-  display: block;
-  padding: 0 1rem;
-  margin: 0;
-  font-size: 20px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  width: 100%;
-  max-height: 100%;
-  align-items: center;
-
-  &:hover {
-    color: $navigation-hover-color;
-    background-color: $navigation-hover-bg;
+  a {
+    @extend .logo;
   }
 }
 
-.nav {
-  @extend .navigation;
-}
+// Header Navigator Section
+header.banner nav.navigation {
+  background-color: $navigation-bg;
+  min-height: auto !important;
 
-.banner .nav li {
-  @extend .nav-item;
-}
+  div.menu-principal-container {
+    @include flex-it();
 
-.banner .nav li a {
-  @extend .nav-link;
-}
+    width: 100%;
+    height: auto;
 
-header .navbar.logo {
-  display: flex;
-  font-size: 7vw;
-  justify-content: center;
-  letter-spacing: 5px;
-  align-items: center;
-  font-family: $family-logo;
-  padding: 3rem;
+    ul {
+      @include flex-it();
 
-  a {
-    &:hover {
-      color: $green;
+      background-color: transparent;
+      align-items: center;
+
+      li {
+        background-color: transparent;
+        height: 100%;
+
+        a {
+          @include flex-it();
+
+          height: 100%;
+          letter-spacing: 1px;
+          color: $navigation-color;
+          font-weight: 300;
+          font-size: 1vw;
+          padding: 0 3em;
+          align-self: center;
+
+          &:hover {
+            background-color: $dgreen;
+            color: $light;
+          }
+
+          i {
+            margin: 0 7px 0 0;
+            line-height: inherit;
+          }
+        }
+      }
+
+      li.current-menu-item {
+        a {
+          background-color: $dgreen;
+          color: $navigation-color;
+
+          i {
+            color: $white;
+            margin: 0;
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
     }
+  }
+}
+
+@media only screen and (max-width: $desktop) {
+  .logo {
+    font-family: $family-logo;
+    font-size: $logo-size-fullhd;
+  }
+
+  // Header Logo Section
+  header.banner .brand {
+    display: flex;
+    justify-content: center;
+    padding: 3vw;
+  }
+
+  // Header Navigator Section
+  header.banner nav.navigation {
+    background-color: $navigation-bg;
+    min-height: auto !important;
+
+    div.menu-principal-container {
+      @include flex-it();
+
+      width: 100%;
+      height: auto;
+
+      ul {
+        @include flex-it();
+
+        background-color: transparent;
+        align-items: center;
+
+        li {
+          background-color: transparent;
+          height: 100%;
+
+          a {
+            @include flex-it();
+
+            height: 100%;
+            letter-spacing: 1px;
+            color: $navigation-color;
+            font-weight: 300;
+            font-size: inherit;
+            padding: 0 1em;
+            align-self: center;
+
+            span {
+              display: none;
+            }
+
+            i {
+              margin: 0;
+              font-size: 1.7em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  .logo {
+    font-family: $family-logo;
+    font-size: $logo-size-tablet;
   }
 }

@@ -2,36 +2,32 @@
   color: $footer-link-color;
 }
 
-footer {
-  display: flex;
-  flex-wrap: wrap;
+footer .brand {
+  padding-top: 5em;
+
+  a.logo {
+    @include flex-it();
+
+    opacity: 0.1;
+    transition: ease 0.7s;
+    -moz-transition: ease 0.7s;
+    -webkit-transition: ease 0.7s;
+
+    &:hover {
+      background-color: $light;
+      color: $primary;
+      opacity: 1;
+    }
+  }
 }
 
-footer .widget {
-  display: flex;
-  flex-basis: 25%;
-  flex-grow: 1;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  height: auto;
-  padding: 0.5em;
+footer.footer .widget {
+  margin: 1em 0;
 
   h3 {
     color: $light;
     align-self: center;
-  }
-}
-
-@media only screen and (max-width: $desktop) {
-  footer .widget {
-    flex-basis: 50%;
-  }
-}
-
-@media only screen and (max-width: $tablet) {
-  footer .widget {
-    flex-basis: 100%;
+    text-align: center;
   }
 }
 
@@ -49,3 +45,7 @@ footer .widget {
 @import "footer-widgets/_recent-posts.scss";
 // Footer widgets customization (RECENT COMMENTS)
 @import "footer-widgets/_recent-comments.scss";
+// Footer widgets customization (SEARCH)
+@import "footer-widgets/_search.scss";
+// Footer widgets customization (CATEGORIES)
+@import "footer-widgets/_categories.scss";

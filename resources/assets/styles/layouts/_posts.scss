@@ -1,0 +1,59 @@
+article#post-card {
+  a.post-link {
+    padding: 0.75rem 0.75rem 0 0.75rem;
+    transition: ease 0.7513s;
+
+    h3 {
+      margin: 0 !important;
+    }
+
+    div.triangle-up {
+      display: hidden;
+      margin: 0 auto;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 30px solid $white;
+    }
+
+    &:hover {
+      background-color: $primary;
+
+      h3 {
+        color: $white;
+      }
+
+      div.triangle-up {
+        display: inherit;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $desktop) {
+  article#post-card {
+    a.post-link {
+      background-color: $primary;
+      padding: 0.75rem 0.75rem 0 0.75rem;
+      transition: ease 0.1753s;
+
+      h3 {
+        margin: 0 !important;
+        color: $white;
+      }
+
+      div.triangle-up {
+        display: inherit;
+        margin: 0 auto;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 30px solid $white;
+      }
+
+      &:hover {
+        div.triangle-up {
+          display: inherit;
+        }
+      }
+    }
+  }
+}

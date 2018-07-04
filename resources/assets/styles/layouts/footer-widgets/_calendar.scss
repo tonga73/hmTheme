@@ -1,16 +1,13 @@
-$footer-calendar-padding: 1.7% 14%;
-
 .calendar-table-padding {
-  padding: $footer-calendar-padding !important;
   border-collapse: inherit;
 }
 
 footer .widget.widget_calendar {
   margin: 0;
-  background-color: $light;
 
   div#calendar_wrap {
-    display: flex !important;
+    @include flex-it();
+
     width: 100%;
 
     caption {
@@ -23,12 +20,29 @@ footer .widget.widget_calendar {
     table#wp-calendar {
       @extend .calendar-table-padding;
 
+      background-color: $light;
+      min-width: 100%;
+
+      thead {
+        background-color: $secondary;
+
+        th {
+          color: $light;
+          text-align: center;
+        }
+      }
+
       tbody {
         tr {
           td {
+            text-align: center;
             padding: 0 1.7px;
           }
         }
+      }
+
+      tfoot {
+        background-color: $secondary;
       }
     }
   }

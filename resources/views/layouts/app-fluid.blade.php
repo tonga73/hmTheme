@@ -4,9 +4,10 @@
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
     @include('partials.header')
-    <div class="container" role="document">
+    @include('partials.page-header')
+    <div class="container is-fluid" role="document">
       <div class="content">
-        <main class="main">
+        <main class="main columns is-multiline is-gapless">
           @yield('content')
         </main>
         @if (App\display_sidebar())

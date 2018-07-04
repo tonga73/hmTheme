@@ -30,7 +30,7 @@ add_filter('body_class', function (array $classes) {
  * Add "… Continued" to the excerpt
  */
 add_filter('excerpt_more', function () {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+    return ' &hellip; <a class="button is-small is-rounded is-primary is-inverted" href="' . get_permalink() . '">' . __('seguir leyendo', 'sage') . '</a>';
 });
 
 /**
