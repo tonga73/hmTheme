@@ -5,7 +5,7 @@
     @php do_action('get_header') @endphp
     @include('partials.header')
     @include('partials.page-header')
-    <div class="container is-fluid" role="document">
+    <div class="container is-fluid padding-bottom-50" role="document">
       <div class="content">
         <main class="main columns is-multiline is-gapless">
           @yield('content')

@@ -1,36 +1,38 @@
-footer .widget.widget_recent_comments {
-  display: block;
-  margin: 0;
-  padding: 0;
-  color: $light;
-  max-height: 100%;
+footer.footer .widget.widget_recent_comments {
+  @include flex-it();
+
+  background-color: $grey-lighter;
+  flex-direction: column;
+  width: 30%;
 
   h3 {
-    width: 100%;
-    background-color: $warning !important;
+    @include flex-it();
+
+    width: 100% !important;
+    font-size: 1.7rem;
+    background-color: $secondary;
+    padding: 15px;
+    color: $light;
   }
 
   ul {
-    li {
-      a {
-        background-color: $light;
-        color: $dark;
+    @include flex-it();
 
-        &:hover {
-          background-color: $green;
-          color: $light;
-        }
-      }
+    height: 100%;
+  }
+}
 
-      span.comment-author-link {
-        color: $white;
+@media only screen and (max-width: $desktop) {
+  footer.footer .widget.widget_recent_comments {
+    width: 50%;
+    max-height: 100% !important;
+  }
+}
 
-        a {
-          background-color: transparent;
-          color: $primary;
-          font-weight: bold;
-        }
-      }
-    }
+@media only screen and (max-width: $tablet) {
+  footer.footer .widget.widget_recent_comments {
+    max-width: 100%;
+    background-color: $grey;
+    max-height: 100% !important;
   }
 }

@@ -1,3 +1,7 @@
+.hero h1 {
+  font-weight: 300 !important;
+}
+
 .hero.is-dgreen-gradient {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4e574e+1,587d45+99 */
   background: #4e574e; /* Old browsers */
@@ -9,16 +13,13 @@
 
 .hero.is-dgreen-gradient .hero-body span.title h1 {
   color: $light;
-  font-size: 3.7vw;
   margin: 0;
-  font-weight: 100;
   letter-spacing: 1px;
 }
 
 @media only screen and (max-width: $tablet) {
   .hero.is-dgreen-gradient .hero-body span.title h1 {
     color: $light;
-    font-size: 3em;
     margin: 0;
     font-weight: 100;
     letter-spacing: 1px;

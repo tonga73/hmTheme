@@ -50,7 +50,7 @@ header.banner nav.navigation {
           align-self: center;
 
           &:hover {
-            background-color: $dgreen;
+            background-color: $navigation-hover-bg;
             color: $light;
           }
 
@@ -63,7 +63,7 @@ header.banner nav.navigation {
 
       li.current-menu-item {
         a {
-          background-color: $dgreen;
+          background-color: $navigation-hover-bg;
           color: $navigation-color;
 
           i {

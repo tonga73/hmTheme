@@ -1,53 +1,98 @@
-footer .widget.widget_search {
-  align-self: center;
+footer.footer .widget.widget_search {
+  @include flex-it();
 
-  form {
-    min-height: 60px;
+  background-color: darken($dark, 7%);
+  width: 100%;
+  padding: 0 !important;
+
+  form.search-form {
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
     input {
-      min-height: 45px;
-      min-width: 35%;
-      font-size: 1em !important;
+      border: none;
     }
 
-    label input {
-      min-height: 45px;
-      min-width: 65%;
+    label {
+      display: flex;
+      width: 100%;
     }
 
-    label input::-webkit-input-placeholder {
-      font-size: 20px;
-      line-height: 175%;
+    input.search-field,
+    label input[type=search] {
+      font-size: 1.7rem !important;
+      color: $light;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      padding: 0 0.97351em;
+      z-index: 100;
+      box-shadow: none;
+    }
+
+    input.search-field:focus,
+    label input[type=search]:focus {
+      background-color: $light;
+      color: $dark;
+    }
+
+    input.search-submit,
+    input.search-submit[type=submit] {
+      display: flex;
+      font-size: 1.1rem !important;
+      height: 100%;
+      background-color: darken($secondary, 7%);
+      padding: 1em 0.97351em;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: $light;
+      border-radius: 0;
+
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $desktop) {
+  footer.footer .widget.widget_search {
+    width: 100%;
+
+    form.search-form {
+      width: 98%;
+
+      input {
+        font-size: 1.2rem !important;
+      }
     }
   }
 }
 
 @media only screen and (max-width: $tablet) {
-  footer .widget.widget_search {
-    align-self: center;
+  footer.footer .widget.widget_search {
+    width: 100%;
 
-    form {
-      min-height: 60px;
+    form.search-form {
+      width: 94%;
 
-      input {
-        min-height: 37px;
-        min-width: 93px;
-        font-size: 1em !important;
+      input.search-field,
+      label input[type=search],
+      input.search-submit,
+      input.search-submit[type=submit] {
+        font-size: 0.8rem !important;
       }
 
-      label input {
-        min-height: 37px;
-        min-width: 217px;
-        padding: 0;
-        margin: 0;
+      input.search-field,
+      label input[type=search] {
+        width: 100%;
       }
 
-      label input::-webkit-input-placeholder {
-        font-size: 20px;
-        line-height: 175%;
-        padding: 0;
-        margin: 0;
-        top: 0;
+      input.search-submit,
+      input.search-submit[type=submit] {
+        padding: 1em 0.57351em;
       }
     }
   }

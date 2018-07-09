@@ -1,0 +1,114 @@
+footer.footer .widget.widget_nav_menu {
+  background-color: $dark;
+  width: 100%;
+  min-height: auto;
+  padding: 0;
+
+  &:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3b444b+65,3b444b+100&1+20,0.35+100 */
+    background: -moz-linear-gradient(top, rgba(51, 51, 51, 1) 20%, rgba(51, 51, 51, 0.63) 65%, rgba(51, 51, 51, 0.35) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(51, 51, 51, 1) 20%, rgba(51, 51, 51, 0.63) 65%, rgba(51, 51, 51, 0.35) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(51, 51, 51, 1) 20%, rgba(51, 51, 51, 0.63) 65%, rgba(51, 51, 51, 0.35) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#3b444b', endColorstr='#593b444b', GradientType=0); /* IE6-9 */
+  }
+
+  .menu-principal-container {
+    @include flex-it();
+
+    width: 100%;
+    min-height: 100%;
+
+    ul {
+      width: 100%;
+      min-height: 100%;
+      display: flex;
+
+      li {
+        @include flex-it();
+
+        min-height: 100%;
+        width: auto;
+        flex-grow: 2;
+
+        a {
+          @include flex-it();
+
+          display: flex;
+          color: rgba($light, 0.5);
+          flex-wrap: wrap;
+          padding: 1em 0;
+          width: 100%;
+          height: 100%;
+
+          &:hover {
+            color: $white;
+          }
+
+          i {
+            font-size: 2.1em;
+          }
+
+          span {
+            font-size: 1.5em;
+          }
+
+          i,
+          span {
+            @include flex-it();
+
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 1.782px;
+            width: 100%;
+            height: 50%;
+            margin: 0;
+            display: block;
+          }
+
+          i::before {
+            @include flex-it();
+
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  footer.footer .widget.widget_nav_menu {
+    .menu-principal-container {
+      ul {
+        width: 90%;
+
+        li {
+          justify-content: space-around;
+          height: 100%;
+          width: auto;
+
+          a {
+            i {
+              font-size: 5.7em;
+            }
+
+            span {
+              font-size: 3.3em;
+              display: none;
+            }
+
+            &:hover {
+              i {
+                display: none;
+              }
+
+              span {
+                display: inherit;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

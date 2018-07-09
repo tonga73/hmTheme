@@ -1,42 +1,31 @@
-.footer-link {
-  color: $footer-link-color;
-}
+$widget-bg: $light;
 
-footer .brand {
-  padding-top: 5em;
+footer.footer {
+  display: flex;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+  height: 100%;
+  padding: 0 !important;
 
-  a.logo {
-    @include flex-it();
-
-    opacity: 0.1;
-    transition: ease 0.7s;
-    -moz-transition: ease 0.7s;
-    -webkit-transition: ease 0.7s;
-
-    &:hover {
-      background-color: $light;
-      color: $primary;
-      opacity: 1;
-    }
+  .widget {
+    background-color: $widget-bg;
+    padding: 0;
   }
 }
 
-footer.footer .widget {
-  margin: 1em 0;
-
-  h3 {
-    color: $light;
-    align-self: center;
-    text-align: center;
+@media only screen and (max-width: $tablet) {
+  footer.footer {
+    display: block;
   }
 }
 
-.content-info.footer a {
-  @extend .footer-link;
-}
-
-.content-info.footer .container {
-  @include flex-between();
+%widget-heading {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  background-color: $secondary;
+  color: $light;
+  border-radius: $radius;
 }
 
 // Footer widgets customization (CALENDAR)
@@ -49,3 +38,9 @@ footer.footer .widget {
 @import "footer-widgets/_search.scss";
 // Footer widgets customization (CATEGORIES)
 @import "footer-widgets/_categories.scss";
+// Footer widgets customization (NAV MENU)
+@import "footer-widgets/_nav-menu.scss";
+// Footer widgets customization (TAG CLOUD)
+@import "footer-widgets/_tag-cloud.scss";
+// Footer widgets customization (SIMPLE SOCIAL ICONS)
+@import "footer-widgets/_simple-social-icons.scss";

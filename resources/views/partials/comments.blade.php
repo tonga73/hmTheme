@@ -4,13 +4,13 @@ if (post_password_required()) {
 }
 @endphp
 
-<section id="comments" class="comments container">
+<section id="comments" class="comments columns is-multiline margin-bottom-30">
   @if (have_comments())
-    <h2>
+    <h2 class="column is-12 hero is-info">
       {!! sprintf(_nx('One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'sage'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>') !!}
     </h2>
 
-    <ol class="comment-list">
+    <ol class="comment-list column is-10 is-offset-1">
       {!! wp_list_comments(['style' => 'ol', 'short_ping' => true]) !!}
     </ol>
 

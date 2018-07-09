@@ -1,59 +1,87 @@
-.calendar-table-padding {
-  border-collapse: inherit;
-}
+footer.footer .widget.widget_calendar {
+  @include flex-it();
 
-footer .widget.widget_calendar {
-  margin: 0;
+  background-color: transparent;
+  color: $light;
+  width: 40%;
+  padding: 1em;
 
-  div#calendar_wrap {
+  .calendar_wrap {
     @include flex-it();
 
     width: 100%;
 
-    caption {
-      margin: 0 auto;
-      font-weight: bold;
-      background-color: $warning;
-      color: $light;
-    }
-
     table#wp-calendar {
-      @extend .calendar-table-padding;
+      font-size: 1.5rem;
 
-      background-color: $light;
-      min-width: 100%;
-
-      thead {
-        background-color: $secondary;
-
-        th {
-          color: $light;
-          text-align: center;
-        }
+      caption {
+        color: darken($light, 10%);
+        height: 100%;
+        width: 100%;
+        padding: 0.1em;
+        background-color: $warning;
+        font-size: 1.7rem;
+        letter-spacing: 3px;
+        font-weight: bold;
+        border-top-right-radius: $radius;
+        border-top-left-radius: $radius;
       }
 
-      tbody {
-        tr {
-          td {
-            text-align: center;
-            padding: 0 1.7px;
+      thead tr th {
+        color: rgba($light, 0.7);
+        background-color: $secondary;
+        padding: 0.351097em 1em 0.0735109em 1em;
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+      }
+
+      tfoot tr td,
+      tbody tr td {
+        padding: 0.09em 1em;
+        color: $light;
+
+        a {
+          background-color: $light;
+          color: $dark;
+          padding: 3px;
+          border-radius: 3px;
+
+          &:hover {
+            background-color: $primary;
+            color: $light;
           }
         }
-      }
 
-      tfoot {
-        background-color: $secondary;
+        td#prev a,
+        td#next a {
+          background-color: $primary;
+          color: $light;
+        }
       }
     }
   }
+}
 
-  a {
-    background-color: $primary;
-    padding: 2px;
-    border-radius: 3px;
+@media only screen and (max-width: $desktop) {
+  footer.footer .widget.widget_calendar {
+    width: 50%;
 
-    &:hover {
-      background-color: $dgreen;
+    .calendar_wrap {
+      table#wp-calendar {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  footer.footer .widget.widget_calendar {
+    width: 100%;
+
+    .calendar_wrap {
+      table#wp-calendar {
+        font-size: 1.1rem;
+      }
     }
   }
 }
